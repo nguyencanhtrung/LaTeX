@@ -1,0 +1,99 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\usepackage{amsthm}
+\newtheorem{mydefinition}{Definition}
+\newtheorem{lemma}{Lemma} 
+
+\title{ISGS \LaTeX Beginner Workshop 2016\\
+\LaTeX{} Exercise Sheet \#2}
+\author{
+Patrick Wolf \\ patrick.wolf@cs.uni-kl.de}
+\date{December 02, 2016}
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\section{Booktabs with Multicolumn \& Multirow}
+\begin{tabular}{cccc}
+\toprule
+1&2&\multicolumn{2}{c}{3}\\
+\multirow{2}{*}{4}&5&6&7\\
+&8& \multicolumn{2}{c}{\multirow{2}{*}{9}}\\
+10&11&&\\
+\bottomrule
+\end{tabular}
+
+\section{Math}
+\subsection{Alignment}
+\begin{align}	% the align environment automatically aligns equations at the = mark
+	a_{1} x  + a_{2} x^{2} = 0\\
+	b_{1} x + b_{2} x^{2} + b_{3} x ^{3} =0
+\end{align}
+
+\subsection{Dot-less Vectors}
+\begin{equation*}
+	\vec{k} = \vec{\imath} \times \vec{\jmath}
+\end{equation*}
+
+\subsection{Golden Ratio}	% note that math mode can be nested within the emphasis
+Two quantities $a$ and $b$ are said to be in the \emph{golden ratio $\varphi$} if
+\begin{equation}
+\frac{a}{b} = \frac{a+b}{a} = \varphi
+\end{equation}
+By the way: $\varphi = 1+\frac{1}{\varphi}$.
+
+
+\subsection{1+1=2}
+Often you see complicated equations like this:
+\begin{equation} \label{eq:1+1}
+1 + 1 = 2
+\end{equation}
+This complicated formula can be significantly simplified. As you know,
+\begin{equation} \label{eq:ln}
+1 = \ln e
+\end{equation}
+
+\begin{equation}
+1 = \sin^2 \alpha + \cos^2 \alpha
+\end{equation}
+and
+\begin{equation} \label{eq:sum}
+2 = \sum_{n=0}^\infty \frac{1}{2^n}
+\end{equation}
+Inserting equations \eqref{eq:ln} -- \eqref{eq:sum} into \eqref{eq:1+1} yields
+\begin{equation}
+\ln e + (\sin^2 \alpha + \cos^2 \alpha) = \sum_{n=0}^\infty \frac{1}{2^n}
+\end{equation}
+Furthermore,
+\begin{equation}
+1 = \cosh \varphi \cdot \sqrt{1 - \tanh^2 \varphi}
+\end{equation}
+and
+\begin{equation}
+e = \lim_{c \rightarrow \infty} \left[1 + \frac{1}{c} \right]^c
+\end{equation}
+With this knowledge we finally can simplify equation~\eqref{eq:1+1} to
+\begin{equation}
+\ln \left(\lim_{c \rightarrow \infty} \left[1 + \frac{1}{c} \right]^c\right) + (\sin^2 \alpha + \cos^2 \alpha) = \sum_{n=0}^\infty \frac{\cosh \varphi \cdot \sqrt{1 - \tanh^2 \varphi}}{2^n}
+\end{equation}
+
+\section{Theorems \& Definitions}
+
+\begin{mydefinition}
+   This is a user definition definition.
+   \label{def_1}
+\end{mydefinition}
+
+\begin{lemma}
+   This is a lemma. Have a look at the number of Definition~\ref{def_1} and this lemma.
+\end{lemma}
+
+
+\end{document}

@@ -1,0 +1,12 @@
+\begin{thebibliography}{1}
+
+\bibitem{wikibook}
+W.~LaTeX. \url{"https://en.wikibooks.org/wiki/LaTeX"}, 2015.
+\newblock last accessd on November 21, 2015.
+
+\bibitem{wikibook_1}
+A.~Einstein, ``{Zur Elektrodynamik bewegter K{\"o}rper}. ({German}) [{On} the
+  electrodynamics of moving bodies],'' {\em Annalen der Physik}, vol.~322,
+  no.~10, pp.~891--921, 1905.
+
+\end{thebibliography}

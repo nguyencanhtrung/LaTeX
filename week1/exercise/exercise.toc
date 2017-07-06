@@ -1,0 +1,13 @@
+\contentsline {paragraph}{Task}{3}{section*.5}
+\contentsline {section}{\numberline {1}Nested Lists}{3}{section.1}
+\contentsline {section}{\numberline {2}RLLC-Tabular}{4}{section.2}
+\contentsline {section}{\numberline {3}Advanced ``Math''}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Dollars \& Pounds}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Lengths}{4}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Maths for Biologists}{5}{subsection.3.3}
+\contentsline {section}{\numberline {4}Manual Index: Using References}{5}{section.4}
+\contentsline {section}{\numberline {5}How to put a Giraffe into a Refrigerator}{5}{section.5}
+\contentsline {section}{\numberline {6}Emphasizing Things}{5}{section.6}
+\contentsline {subsection}{\numberline {6.1}Some Fonts}{5}{subsection.6.1}
+\contentsline {section}{\numberline {7}Quotes}{5}{section.7}
+\contentsline {section}{\numberline {8}Commands}{6}{section.8}

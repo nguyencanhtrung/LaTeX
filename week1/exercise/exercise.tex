@@ -1,0 +1,193 @@
+\documentclass[a4paper, 10pt]{article}
+% preample
+\usepackage{hyperref}    %embedded email, automatically link \ref to section
+\usepackage{url}				%embedded URL
+\usepackage{todonotes} %todo notes
+\usepackage{booktabs}  %tabular package
+\usepackage[fleqn]{amsmath} 	%align formular
+\usepackage[linesnumbered]{algorithm2e} % algorithm environment
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\makeindex
+
+% define new commands
+\newcommand{\smileyitem}{:-)}
+
+% opening section
+\title{ISGS \LaTeX { }Beginner's Workshop 
+		\\ \LaTeX 2006 - Exercise Sheet \# 1 }
+\author{Trung C. Nguyen 
+			\\ email \href{mailto:nguyencanhtrung@me.com}{nguyencanhtrung@me.com} }
+
+% Main document
+\begin{document}
+	\maketitle
+	\tableofcontents
+	
+	\newpage
+	\listoftodos
+	
+	\newpage
+	\todo{Adding Task here}
+	
+	%{\raggedright\Large\textbf{Task}}\\
+	\section*{Task}  % it won't be included to table content\\
+	Re-program the entire exercise sheet and have a look at \cite{wikibook} if you need any help solving the problems at home
+	
+	\paragraph{Task} \hspace{0pt} \\           % adding \hspace to be able do line break here
+	Re-program the entire exercise sheet and have a look at \cite{wikibook} if you need any help solving the problems at home
+	%-----------------------------------------------------------
+	% First SECTION
+	%-----------------------------------------------------------
+	\section{Nested Lists}
+	This is a list which should be named in the index.
+		\begin{itemize}
+			\item Red
+			\item Green
+				\begin{enumerate}
+					\item (striped)
+					\item (dotted) \linebreak
+					 		  no number
+					\item[7] different number
+				\end{enumerate}
+			\item White\footnote{note all the white space on this page}
+		\end{itemize}
+	In section ~\ref{sec:rclltab}, we continue with tables		
+	
+	\newpage
+	%-----------------------------------------------------------
+	% Second SECTION
+	%-----------------------------------------------------------
+	\section[RLLC-Tabular]{RLLC-tabular}
+	\label{sec:rclltab}
+	The section title does not match the table of contents\dots \\
+		\indent Here is a gap of 5\,cm.	% \,  to get a gap of half space
+		\vspace{5cm}								% vertical gap of 5 cm
+		
+		\begin{table}[h!]
+			\begin{tabular}{rcll}
+			Color&Fruit&Color&Clothing\\
+			Red&Pear&White&Shirt\\
+			Green&Pear&White&Shirt\\
+			Yellow&Banana&Blue&Hat
+			\end{tabular}
+		\end{table}
+	
+		\begin{table}[h!]
+			\caption{The table uses the \texttt{booktabs} package for the rules. 
+							Additionally, a \texttt{table} environment encapsulates a \texttt{tabular} environment. 
+							The \underline{caption} uses the \texttt{caption} command.}
+			\label{table 1}
+			\begin{tabular}{c p{0.7\textwidth}}
+				\toprule
+				\textbf{Centered}  & \textbf{Text} \\
+				\midrule
+				Centered     & Long text. Long text. Long text. Long text. Long text. Long text. 
+									Long text. Long text. Long text. Long text. Long text. Long text. 
+									Long text. Long text. Long text. Long text. Long text. \\
+				Missing text & 			\\ 
+				\bottomrule
+			\end{tabular}
+		\end{table}
+
+		
+	A reference to the \ref{table 1} on page \pageref{table 1}.
+	
+	%-----------------------------------------------------------
+	% Third SECTION
+	%-----------------------------------------------------------
+	\section{Advanced \lq\lq Math\rq\rq}
+		\subsection{Dollars \& Pounds}{\label{section 3.1}}
+			\todo{Left alignment not done}
+			\begin{flalign}
+				\$\,1 + \pounds\,1 &=  \,? \\
+				\$\,1 - \pounds\,1 &=  \,?
+			\end{flalign}
+			
+
+		
+		\subsection{Lengths}
+			23\,mm + 0.004\,km =?
+		\subsection{Maths for Biologists\index{biology}}
+		How much wood would a woodchuck\index{biology!woodchuck} chuck if a woodchuck\index{biology!woodchuck} would chuck wood?
+		
+	%-----------------------------------------------------------
+	% Fourth SECTION
+	%-----------------------------------------------------------
+	\section{Manual Index: Using References}
+	We can surely say that section \ref{section 3.1} is on page \pageref{section 3.1}
+	%-----------------------------------------------------------
+	% Fifth SECTION
+	%-----------------------------------------------------------
+	\section{How to put a Giraffe into a Refrigerator}
+	We have found a simple solution for this age-old problem. It can best be described using the \texttt{algorithm} environment which we get using
+	\begin{verbatim}
+	\usepackage{algorithm2e}
+	\end{verbatim}
+	in the preamble
+
+	\verb|\usepackage{algorithm2e}| 	% similar meaning as \begin{verbatim} 
+	
+	\begin{algorithm}
+	Open Door\;
+	\While{ Giraffe not Inside}{
+			\eIf{Still power} 
+				{Push\;}
+				{Rest some time \;}
+	}
+	Close Door\;
+	\caption{Putting a Giraffe into the Fridge}
+	\label{algorithm 1}
+	\end{algorithm}
+	
+	Another reference, it points to algorithm~\ref{algorithm 1}. Did you notice that the numbers adopt to the content?
+	
+	%-----------------------------------------------------------
+	% Sixth SECTION
+	%-----------------------------------------------------------
+	\section{Emphasizing Things}
+	With the command \texttt{\textbackslash emph{\dots}} you can \emph{emphasize} a word. Its appearance depends--of course--on the currently selected document class and style. \textsl{If the text itself was slanted,} the emphasized words \textsl{would appear upright!}
+		\subsection{Some Fonts\index{font}}
+		\hspace{3pt} {\todo{adding indent here}}There are {\huge huge} and {\tiny tiny} fonts. For instance, text may be \textbf{bold}\index{font!bold|textbf} or \textit{italic}\index{font!italic|textit}. It might also have another font family like Roman Family or {\sffamily Sans Serif Family}.
+	
+	%-----------------------------------------------------------
+	% Seventh SECTION
+	%-----------------------------------------------------------
+	\section{Quotes}
+	This is a quotation.
+	\begin{quotation}
+	LaTeX (pronounced either Lah-tech or Lay-tech) is a macro package based on TeX created by Leslie Lamport~[\cite{wikibook_1}, page~\pageref{ref}].
+	\end{quotation}
+	
+	{\todo{Removing indent here}}Have a look at the bibligraphy. There seems to be an item which was not cited within this document.
+	
+	%-----------------------------------------------------------
+	% Eighth SECTION
+	%-----------------------------------------------------------
+	\section{Commands}
+	A new defined command \texttt{\textbackslash smileyitem} generates a list\index{list|textbf} entry with a smiley icon
+	
+	\paragraph*{Example} \hspace{0pt} \\
+	The command \texttt{\textbackslash smileyitem} used within an \texttt{itemize} or \texttt{enumerate} environment looks like:
+	\begin{enumerate}
+		\item[\smileyitem] This is a smiley item \dots
+	\end{enumerate}
+	
+	\begin{itemize}
+		\item  and this not 
+	\end{itemize}
+	
+	%-----------------------------------------------------------
+	% Nineth SECTION
+	%-----------------------------------------------------------	
+	
+	\medskip
+	
+	% Adding bib
+	\bibliography{bibfile} {\label{ref}}
+	\bibliographystyle{ieeetr}
+	\todo{Incomplete reference, not cite -> not appear in the reference; How to put URL on ref}
+	
+	\newpage
+	\printindex
+\end{document}

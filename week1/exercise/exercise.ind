@@ -1,0 +1,16 @@
+\begin{theindex}
+
+  \item biology, \hyperpage{5}
+    \subitem woodchuck, \hyperpage{5}
+
+  \indexspace
+
+  \item font, \hyperpage{5}
+    \subitem bold, \hyperindexformat{\textbf}{5}
+    \subitem italic, \hyperindexformat{\textit}{5}
+
+  \indexspace
+
+  \item list, \hyperindexformat{\textbf}{6}
+
+\end{theindex}
